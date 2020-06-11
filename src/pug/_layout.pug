@@ -1,0 +1,32 @@
+include _mixins
+
+block vars
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name="viewport" content="initial-scale=1.0, width=device-width")
+		title 123
+		meta(name="description", content='123')
+
+		link(rel='stylesheet', href='css/libs.min.css')
+		link(rel='stylesheet', href='css/style.min.css')
+
+
+
+	body(class="page " + pageClass)
+		.page__wrapper
+			include modules/_header
+
+			main.page__content
+				block content
+
+			include modules/_footer
+		block scripts
+			script(src='js/libs.min.js')
+			script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+			script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js')
+			//script(src='js/blazy.min.js')
+			script(src='js/main.min.js')
