@@ -24,7 +24,7 @@ const gulp = require('gulp'),
 
 //Create task
 gulp.task('sass', () => {
-  return gulp.src('src/sass/style.scss') // take the source
+  return gulp.src('src/scss/style.scss') // take the source
     .pipe(cssImport())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -158,7 +158,7 @@ gulp.task('browser-sync', () => {
 
 // Monitoring file changes
 gulp.task('watch', () => {
-  gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/scss/**/*.scss', gulp.series('sass'));
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('src/js/**/*.js', gulp.series('js'));
   gulp.watch('src/img/', gulp.series('img'));
