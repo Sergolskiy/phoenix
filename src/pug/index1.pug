@@ -15,7 +15,7 @@ block content
     </picture>
 
   div.main-wrap
-    .top-block
+    .top-block.webp-img.b-lazy(data-webp="./img/index-top-bg.webp" data-img="./img/index-top-bg.jpg")
       .top-block__inner.site-container
         h1.top-block__title.site-title Лечение наркомании и алкоголизма в наркологическом центре <b> «Феникс» </b>
         .top-block__caption Наркологический центр в Самаре и Самарской области «Феникс»
@@ -32,23 +32,23 @@ block content
           .type-items__inner
             .type-items__item
               .type-items__img
-                img(src='' alt="img")
+                include ../img/ico/top-block-ico01.svg
               .type-items__txt Лечение <br> наркомании
             .type-items__item
               .type-items__img
-                img(src='' alt="img")
+                include ../img/ico/top-block-ico02.svg
               .type-items__txt Лечение <br> алкоголизма
             .type-items__item
               .type-items__img
-                img(src='' alt="img")
+                include ../img/ico/top-block-ico03.svg
               .type-items__txt Лечение <br> зависимости от спайса
             .type-items__item
               .type-items__img
-                img(src='' alt="img")
+                include ../img/ico/top-block-ico04.svg
               .type-items__txt Лечение <br> зависимости от солей
             .type-items__item
               .type-items__img
-                img(src='' alt="img")
+                include ../img/ico/top-block-ico05.svg
               .type-items__txt Лечение <br> игромании
 
     .servise
@@ -57,69 +57,111 @@ block content
         .servise__items
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img01.webp" type="image/webp")
+                source(srcset="./img/services-img01.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Вывод из запоя на дому и в клинике
               .servise__txt Снятие абстинентного синдрома при алкоголизме.
               .servise__price от 3 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img02.webp" type="image/webp")
+                source(srcset="./img/services-img02.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name УБОД
               .servise__txt Ультрабыстрая опиоидная детоксикация. Только в условиях клиники.
               .servise__price от 13 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img03.webp" type="image/webp")
+                source(srcset="./img/services-img03.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Кодирование / Подшивание
               .servise__txt Создание отрицательного рефлекса на алкоголь.
               .servise__price от 4 500 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img04.webp" type="image/webp")
+                source(srcset="./img/services-img04.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Вызов нарколога на дом
               .servise__txt Круглосуточная наркологическая помощь на дому.
               .servise__price от 3 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img05.webp" type="image/webp")
+                source(srcset="./img/services-img05.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Снятие ломки
               .servise__txt Снятие абстинентного синдрома при наркомании.        Только в условиях клиники.
               .servise__price от 3 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img06.webp" type="image/webp")
+                source(srcset="./img/services-img06.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Детоксикация
               .servise__txt Очищение организма от токсичных веществ при алкоголизме или наркомании. Чистка крови.
               .servise__price от 3 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img07.webp" type="image/webp")
+                source(srcset="./img/services-img07.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Реабилитация в стационаре
               .servise__txt Психо-социальная реабилитации в закрытом стационаре по программе              «12 шагов».
               .servise__price от 15 000 руб.
           .servise__item
             .servise__img
-              img(src="" alt="img")
+              picture
+                source(srcset="./img/services-img08.webp" type="image/webp")
+                source(srcset="./img/services-img08.png" type="image/png")
+                img(src="" alt="img")
             .servise__desc
               .servise__name Мотивация  зависимых на лечение
               .servise__txt Если зависимый не хочет лечится или не признает проблему. Поможем убедить.
               .servise__price от 5 000 руб.
+
+
+    .call-spec
+      .call-spec__inner
+        .call-spec__content
+          .call-spec__top
+            .call-spec__top-txt
+              .call-spec__top-txt-title ВЫЕЗД СПЕЦИАЛИСТА НА ДОМ
+              .call-spec__top-txt-desc Скорая наркологическая помощь
+            .call-spec__top-phone
+              a(href="tel:+79170362600").call-spec__top-phone-i +7 (917) 036 26 00
+              a(href="#").site-btn.call-spec__top-phone-btn
+                span Вызвать нарколога
+          .call-spec__bottom
+            .call-spec__bottom-txt Вы всегда можете воспользоваться нашей помощью для мотивации на лечение или сопровождения до наркологического центра
 
     .about
       .about__inner.site-container
         h2.about__title.site-h2 О НАШЕМ НАРКОЛОГИЧЕСКОМ ЦЕНТРЕ
         .about__caption.site-caption Наркологический центр в Самаре и Самарской области «Феникс»
         .about__txt.site-text-block
-          .site-text-block__left
-            img(src='#' alt='img')
           .site-text-block__txt
+            .site-text-block__left-img
+              picture
+                source(srcset="./img/about-img01.webp" type="image/webp")
+                source(srcset="./img/about-img01.png" type="image/png")
+                img(src="" alt="img")
             p.
               <h4>Анонимный наркологический центр в Самаре «Феникс» давно работает в сфере лечения наркотической, алкогольной и других видов зависимостей.</h4>
               Наше учреждение является одним из самых успешных медицинских клиник, которые готовы оказать любую экстренную наркологическую помощь на любой стадии зависимости. Наши филиалы расположены на всей территории Самарской области. Все центры оснащены комфортабельными условиями стационара и всем необходимым для полноценного лечения и реабилитации. Квалифицированный штат сотрудников состоит из дипломированных психологов, психиатров, психотерапевтов, наркологов и реабилитологов, которые доказали свой профессионализм множеством пациентов, вернувшихся к здоровой жизни.
@@ -133,7 +175,7 @@ block content
       .we-work__inner.site-container
         .we-work__top
           .we-work__img
-            img(src='' alt='img')
+            img(src='./img/doctor.svg' alt='img')
           .we-work__time 24/7
           .we-work__right
             span Мы работаем
@@ -175,19 +217,19 @@ block content
         .how-cure__items
           .how-cure__item
             .how-cure__img
-              img(src='' alt='img')
+              include ../img/ico/how-do-we-treat-ico01.svg
             .how-cure__txt Диагностика текущего состояния
           .how-cure__item
             .how-cure__img
-              img(src='' alt='img')
+              include ../img/ico/how-do-we-treat-ico02.svg
             .how-cure__txt Назначение индивидуального плана лечения
           .how-cure__item
             .how-cure__img
-              img(src='' alt='img')
+              include ../img/ico/how-do-we-treat-ico03.svg
             .how-cure__txt Снятие симптомов
           .how-cure__item
             .how-cure__img
-              img(src='' alt='img')
+              include ../img/ico/how-do-we-treat-ico04.svg
             .how-cure__txt Курс лечения
 
     .narco-help
@@ -200,22 +242,25 @@ block content
             .narco-help__items
               .narco-help__item
                 .narco-help__item-icon
-                  img(src='' alt='img')
+                  include ../img/ico/services-ico01.svg
                 .narco-help__item-name Медико-социальные мероприятия,
                 .narco-help__item-txt которые сориентированы на восстановление здоровья хронических форм алкоголизма или наркомании.
               .narco-help__item
                 .narco-help__item-icon
-                  img(src='' alt='img')
+                  include ../img/ico/services-ico02.svg
                 .narco-help__item-name Детоксикация организма,
                 .narco-help__item-txt которая включает в себя введение в организм больного специальных препаратов, что помогают вывести токсины из него.
               .narco-help__item
                 .narco-help__item-icon
-                  img(src='' alt='img')
+                  include ../img/ico/services-ico03.svg
                 .narco-help__item-name Вывод из запоя
                 .narco-help__item-txt в стационаре и на дому. Проводится при необходимости срочно прийти в трезвое состояние, а также в случае отравления этилом.
           .narco-help__right
             .narco-help__img
-              img(src='' alt='img')
+              picture
+                source(srcset="./img/services-clinic-img01.webp" type="image/webp")
+                source(srcset="./img/services-clinic-img01.png" type="image/png")
+                img(src="" alt="img")
             .narco-help__txt
               p.
                 Неотложная скорая помощь наркологического центра <b>«Феникс»</b> анонимна и проводится в тайне от посторонних. Данные о зависимости никуда не передаются.
@@ -237,7 +282,12 @@ block content
               .check-item Курс лечения оканчивается реабилитацией, которая поможет избежать рецидива заболевания.
           .warrranty__right
             .warrranty__img
-              img(src='' alt='img')
+              picture
+                source(srcset="./img/video-preview-img.webp" type="image/webp")
+                source(srcset="./img/video-preview-img.png" type="image/png")
+                img(src="" alt="img")
+              .warrranty__img-play
+                include ../img/ico/play.svg
 
         .warrranty__bottom Наркологический центр <b>«Феникс»</b> в Самаре и Самарской области использует только современные методики, которые доказали свою эффективность, а медицинский персонал регулярно доказывает свой профессионализм победами над пагубными привычками.
 
@@ -247,7 +297,25 @@ block content
         .sertificate__title ЛИЦЕНЗИЯ И СЕРТИФИКАТЫ
           .sertificate__items
             .sertificate__item
-              img(src='' alt='img')
+              picture
+                source(srcset="./img/sertific01.webp" type="image/webp")
+                source(srcset="./img/sertific01.png" type="image/png")
+                img(src="" alt="img")
+            .sertificate__item
+              picture
+                source(srcset="./img/sertific02.webp" type="image/webp")
+                source(srcset="./img/sertific02.png" type="image/png")
+                img(src="" alt="img")
+            .sertificate__item
+              picture
+                source(srcset="./img/sertific03.webp" type="image/webp")
+                source(srcset="./img/sertific03.png" type="image/png")
+                img(src="" alt="img")
+            .sertificate__item
+              picture
+                source(srcset="./img/sertific04.webp" type="image/webp")
+                source(srcset="./img/sertific04.png" type="image/png")
+                img(src="" alt="img")
 
 
     .pricing
@@ -290,7 +358,10 @@ block content
         .reviews__item
           .reviews__left
             .reviews__img
-              img(src='' alt='img')
+              picture
+                source(srcset="./img/reviews-avatar01.webp" type="image/webp")
+                source(srcset="./img/reviews-avatar01.png" type="image/png")
+                img(src="" alt="img")
             .reviews__name Михаил, Тольятти
             .reviews__data 12 апреля, 2020
           .reviews__right
