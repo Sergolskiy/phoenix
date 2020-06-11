@@ -40,14 +40,26 @@ $(document).ready(function(){
       var webp = $(this).data('webp');
       $(this).attr('data-blazy', webp);
     });
+
+    var bLazy = new Blazy({
+      src: 'data-blazy'
+    });
+
   }, function () {
     $('.webp-img').each(function () {
       var img = $(this).data('img');
       $(this).attr('data-blazy',  img );
     });
+
+    var bLazy = new Blazy({
+      src: 'data-blazy'
+    });
+
   });
 
-  var bLazy = new Blazy();
+  var bLazy = new Blazy({
+    src: 'data-blazy'
+  });
 
 
 
