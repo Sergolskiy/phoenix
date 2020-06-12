@@ -61,6 +61,33 @@ $(document).ready(function(){
     src: 'data-blazy'
   });
 
+  if($(document).width() > 992){
+    $('.header__menu-item').hover(function () {
+      $(this).addClass('open');
+    }, function () {
+      $(this).removeClass('open');
+    });
+  } else {
+    $('.header__menu-item').click(function (e) {
+      if($(e.target).hasClass('header__menu-link')){
+        e.preventDefault();
+        $(this).addClass('open');
+      }
+      if($(e.target).hasClass('mobile-back-link')){
+        e.preventDefault();
+        $(this).removeClass('open');
+      }
+    });
+  }
+
+
+
+  $('.header__menu-btn').click(function () {
+    $(this).closest('header').toggleClass('menu-open');
+    $('.header__menu').toggleClass('open');
+    $(this).toggleClass('open');
+  });
+
 
 
   // $('.owl-carousel').owlCarousel({

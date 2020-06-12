@@ -1,5 +1,8 @@
 header.header
   .header__inner
+    .header__logo
+      a(href="#")
+        img(src="./img/logo-small.svg" alt="logo").footer__logo-img
     ul.header__menu
       li.header__menu-item
         a(href="#" data-title="Наркомания").header__menu-link
@@ -88,4 +91,13 @@ header.header
       li.header__menu-item
         a(href="#" data-title="Контакты").header__menu-link
           span Контакты
+
+      li.header__menu-item.mobile
+        span.header__menu-town г. Самара, <br> ул. Физкультурная 90-А, офис 314
+      li.header__menu-item.mobile
+        .header__menu-num
+          a(href="tel:+79170362600") +7 (917) 036 26 00
+          a(href='#') Бесплатная консультация (24/7)
+
+    a(href="#").mobile.header__menu-btn
 
