@@ -72,6 +72,9 @@ $(document).ready(function(){
   // });
 
 
+  var phoneMask = $('input[data-valid="phone"]');
+  $(phoneMask).inputmask('+7(999)999-99-99');
+
 });
 
 

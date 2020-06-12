@@ -24,18 +24,18 @@ block content
                 .top-block__call-left
                   a(href="tel:+79170362600") +7 (917) 036 26 00
                   span Бесплатная консультация (24/7)
-            h1.top-block__title.site-title Вывод из запоя в Самаре
+            h1.top-block__title.site-title <strong>Вывод из запоя в Самаре</strong>
             .top-block__caption круглосуточно, быстро и анонимно
           .top-block-service__form
             form.site-form
-              .site-form__title
-              .site-form__caption
+              .site-form__title Быстро избавим от запоя
+              .site-form__caption Врач приедет в течении часа
               .site-form__row
                 .site-form__input
-                  input(type="text" placeholder="")
+                  input(type="text" placeholder="Ваше имя")
               .site-form__row
                 .site-form__input
-                  input(type="tel" inputmode="numeric" placeholder="")
+                  input(type="tel" inputmode="numeric" placeholder="+7(___)___-__-__" data-valid="phone")
               .site-form__btn
                 a(href="javascript:void(0);").site-btn.submit-btn.site-form__btn-i
                   span Заказать звонок
@@ -80,9 +80,9 @@ block content
     .site-container
       h2.site-h2 экспресс вывод из запоя
       .site-tabs
-        a(href="").site-tab Стандарт
-        a(href="").site-tab Комфорт
-        a(href="").site-tab VIP
+        a(href="").site-tabs__item Стандарт
+        a(href="").site-tabs__item Комфорт
+        a(href="").site-tabs__item VIP
 
     .about
       .about__inner.site-container
@@ -213,7 +213,7 @@ block content
                 | Специалисты центра по мотивации гарантированно убедят зависимого начать лечение.
             .call-spec__top-phone
               a(href="tel:+79170362600").call-spec__top-phone-i +7 (917) 036 26 00
-              a(href="#").site-btn.call-spec__top-phone-btn
+              a(href="#").site-btn.site-btn--br.call-spec__top-phone-btn
                 span Вызвать нарколога
           .call-spec__bottom
             .call-spec__bottom-txt Позвоните по телефону горячей линии и получите бесплатную консультацию нарколога. Мы работаем круглосуточно 24/7
@@ -295,23 +295,25 @@ block content
     .narco-help
       .narco-help__inner.site-container
         h2.narco-help__title.site-h2 Показания к выведению из запоя в домашних условиях
-        .narco-help__subtitle Услуги клиники при скорой наркологической помощи состоят:
+        .narco-help__signs Признаки запоя:
         .narco-help__desc
           .narco-help__left
-            .narco-help__signs Признаки запоя:
             .narco-help__items
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico04.svg
-                .narco-help__item-name Многодневное употребление алкоголя
+                .narco-help__item-info
+                  .narco-help__item-name Многодневное употребление алкоголя
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico05.svg
-                .narco-help__item-name Постоянное увеличение дозы
+                .narco-help__item-info
+                  .narco-help__item-name Постоянное увеличение дозы
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico06.svg
-                .narco-help__item-name Изменения эмоционального фона
+                .narco-help__item-info
+                  .narco-help__item-name Изменения эмоционального фона
           .narco-help__right
             .narco-help__img
               picture
@@ -345,24 +347,24 @@ block content
 
     .how-cure
       .how-cure__inner.site-container
-        h2.how-cure__title.site-h2 Как мы лечим?
+        h2.how-cure__title.site-h2.site-h2--white Как мы лечим?
         .how-cure__items
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico01.svg
-            .how-cure__txt Диагностика текущего состояния
+            .how-cure__txt Диагностика <br> текущего <br> состояния
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico02.svg
-            .how-cure__txt Назначение индивидуального плана лечения
+            .how-cure__txt Назначение <br> индивидуального <br> плана лечения
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico03.svg
-            .how-cure__txt Снятие симптомов
+            .how-cure__txt Снятие <br> симптомов
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico04.svg
-            .how-cure__txt Курс лечения
+            .how-cure__txt Курс <br> лечения
 
     .about
       .about__inner.site-container
@@ -380,34 +382,38 @@ block content
             p
               | При первом знакомстве с пациентом, наши врачи проводят тщательный осмотр человека и диагностика его нынешнего состояния, что поможет правильно определиться с эффективными методами искоренения проблемы. Самый распространенный способ – вывод из запоя капельницей. С её помощью больному вводится специальный раствор, который очищает кровь от токсинов и ядов этилового спирта. После проведения детоксикации, больному назначается курс лекарственных общеукрепляющих и  седативных препаратов, которые нормализуют психику алкоголика и восстановят нормальную работу организма. Процедура терапии может занимать от нескольких часов до более длительного времени.
 
-    .narco-help
+    .narco-help.narco-help--many-icons
       .narco-help__inner.site-container
         h2.narco-help__title.site-h2 Показания к выведению из запоя в домашних условиях
         .narco-help__subtitle Услуги клиники при скорой наркологической помощи состоят:
         .narco-help__desc
           .narco-help__left
-            .narco-help__signs Признаки запоя:
             .narco-help__items
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico07.svg
-                .narco-help__item-name Наличие психических расстройств и заболеваний
+                .narco-help__item-info
+                  .narco-help__item-name Наличие психических расстройств и заболеваний
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico08.svg
-                .narco-help__item-name Агрессия в период абстиненции
+                .narco-help__item-info
+                  .narco-help__item-name Агрессия в период абстиненции
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico09.svg
-                .narco-help__item-name Нарушения в работе сердца и имеющиеся заболевания в этой области
+                .narco-help__item-info
+                  .narco-help__item-name Нарушения в работе сердца и имеющиеся заболевания в этой области
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico10.svg
-                .narco-help__item-name Возрастная категория от 60 лет и выше
+                .narco-help__item-info
+                  .narco-help__item-name Возрастная категория от 60 лет и выше
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico11.svg
-                .narco-help__item-name Длительность беспрерывного употребления спиртного на протяжении более 5 суток.
+                .narco-help__item-info
+                  .narco-help__item-name Длительность беспрерывного употребления спиртного на протяжении более 5 суток.
           .narco-help__right
             .narco-help__img
               picture

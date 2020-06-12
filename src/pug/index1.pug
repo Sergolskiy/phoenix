@@ -26,7 +26,8 @@ block content
               a(href="tel:+79170362600") +7 (917) 036 26 00
               span Бесплатная консультация (24/7)
             .top-block__call-right
-              a(href="#").top-block__call-btn.site-btn Обратный звонок
+              a(href="#").top-block__call-btn.site-btn
+                span Обратный звонок
 
         .type-items
           .type-items__inner
@@ -146,7 +147,7 @@ block content
               .call-spec__top-txt-desc Скорая наркологическая помощь
             .call-spec__top-phone
               a(href="tel:+79170362600").call-spec__top-phone-i +7 (917) 036 26 00
-              a(href="#").site-btn.call-spec__top-phone-btn
+              a(href="#").site-btn.site-btn--br.call-spec__top-phone-btn
                 span Вызвать нарколога
           .call-spec__bottom
             .call-spec__bottom-txt Вы всегда можете воспользоваться нашей помощью для мотивации на лечение или сопровождения до наркологического центра
@@ -213,24 +214,24 @@ block content
 
     .how-cure
       .how-cure__inner.site-container
-        h2.how-cure__title.site-h2 Как мы лечим?
+        h2.how-cure__title.site-h2.site-h2--white Как мы лечим?
         .how-cure__items
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico01.svg
-            .how-cure__txt Диагностика текущего состояния
+            .how-cure__txt Диагностика <br> текущего <br> состояния
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico02.svg
-            .how-cure__txt Назначение индивидуального плана лечения
+            .how-cure__txt Назначение <br> индивидуального плана <br> лечения
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico03.svg
-            .how-cure__txt Снятие симптомов
+            .how-cure__txt Снятие <br> симптомов
           .how-cure__item
             .how-cure__img
               include ../img/ico/how-do-we-treat-ico04.svg
-            .how-cure__txt Курс лечения
+            .how-cure__txt Курс <br> лечения
 
     .narco-help
       .narco-help__inner.site-container
@@ -243,18 +244,21 @@ block content
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico01.svg
-                .narco-help__item-name Медико-социальные мероприятия,
-                .narco-help__item-txt которые сориентированы на восстановление здоровья хронических форм алкоголизма или наркомании.
+                .narco-help__item-info
+                  .narco-help__item-name Медико-социальные мероприятия,
+                  .narco-help__item-txt которые сориентированы на восстановление здоровья хронических форм алкоголизма или наркомании.
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico02.svg
-                .narco-help__item-name Детоксикация организма,
-                .narco-help__item-txt которая включает в себя введение в организм больного специальных препаратов, что помогают вывести токсины из него.
+                .narco-help__item-info
+                  .narco-help__item-name Детоксикация организма,
+                  .narco-help__item-txt которая включает в себя введение в организм больного специальных препаратов, что помогают вывести токсины из него.
               .narco-help__item
                 .narco-help__item-icon
                   include ../img/ico/services-ico03.svg
-                .narco-help__item-name Вывод из запоя
-                .narco-help__item-txt в стационаре и на дому. Проводится при необходимости срочно прийти в трезвое состояние, а также в случае отравления этилом.
+                .narco-help__item-info
+                  .narco-help__item-name Вывод из запоя
+                  .narco-help__item-txt в стационаре и на дому. Проводится при необходимости срочно прийти в трезвое состояние, а также в случае отравления этилом.
           .narco-help__right
             .narco-help__img
               picture
