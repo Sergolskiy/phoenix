@@ -139,18 +139,16 @@ block content
 
 
     .call-spec
-      .call-spec__inner
+      .call-spec__inner.site-container
         .call-spec__content
-          .call-spec__top
-            .call-spec__top-txt
-              .call-spec__top-txt-title ВЫЕЗД СПЕЦИАЛИСТА НА ДОМ
-              .call-spec__top-txt-desc Скорая наркологическая помощь
-            .call-spec__top-phone
-              a(href="tel:+79170362600").call-spec__top-phone-i +7 (917) 036 26 00
-              a(href="#").site-btn.site-btn--br.call-spec__top-phone-btn
-                span Вызвать нарколога
-          .call-spec__bottom
-            .call-spec__bottom-txt Вы всегда можете воспользоваться нашей помощью для мотивации на лечение или сопровождения до наркологического центра
+          .call-spec__top-txt
+            span.call-spec__top-txt-title ВЫЕЗД СПЕЦИАЛИСТА НА ДОМ
+            span.call-spec__top-txt-desc Скорая наркологическая помощь
+          .call-spec__top-phone
+            a(href="tel:+79170362600").call-spec__top-phone-i +7 (917) 036 26 00
+            a(href="#").site-btn.site-btn--br.call-spec__top-phone-btn
+              span Вызвать нарколога
+          .call-spec__bottom-txt Вы всегда можете воспользоваться нашей помощью для мотивации на лечение или сопровождения до наркологического центра
 
     .about
       .about__inner.site-container
@@ -299,27 +297,37 @@ block content
     .sertificate
       .sertificate__inner.site-container
         .sertificate__title ЛИЦЕНЗИЯ И СЕРТИФИКАТЫ
-          .sertificate__items
-            .sertificate__item
-              picture
-                source(srcset="./img/sertific01.webp" type="image/webp")
-                source(srcset="./img/sertific01.png" type="image/png")
-                img(src="" alt="img")
-            .sertificate__item
-              picture
-                source(srcset="./img/sertific02.webp" type="image/webp")
-                source(srcset="./img/sertific02.png" type="image/png")
-                img(src="" alt="img")
-            .sertificate__item
-              picture
-                source(srcset="./img/sertific03.webp" type="image/webp")
-                source(srcset="./img/sertific03.png" type="image/png")
-                img(src="" alt="img")
-            .sertificate__item
-              picture
-                source(srcset="./img/sertific04.webp" type="image/webp")
-                source(srcset="./img/sertific04.png" type="image/png")
-                img(src="" alt="img")
+          .sertificate-slider.swiper-container#sertificate-slider
+            .sertificate__items.swiper-wrapper
+              .sertificate__item.swiper-slide
+                picture
+                  source(srcset="./img/sertific01.webp" type="image/webp")
+                  source(srcset="./img/sertific01.png" type="image/png")
+                  img(src="" alt="img")
+              .sertificate__item.swiper-slide
+                picture
+                  source(srcset="./img/sertific02.webp" type="image/webp")
+                  source(srcset="./img/sertific02.png" type="image/png")
+                  img(src="" alt="img")
+              .sertificate__item.swiper-slide
+                picture
+                  source(srcset="./img/sertific03.webp" type="image/webp")
+                  source(srcset="./img/sertific03.png" type="image/png")
+                  img(src="" alt="img")
+              .sertificate__item.swiper-slide
+                picture
+                  source(srcset="./img/sertific04.webp" type="image/webp")
+                  source(srcset="./img/sertific04.png" type="image/png")
+                  img(src="" alt="img")
+
+            .site-container.swiper-relative
+              .swiper-pagination
+
+              .swiper-button-wrap
+                .swiper-button-prev
+                  include ../img/ico/arrow-w.svg
+                .swiper-button-next
+                  include ../img/ico/arrow-b.svg
 
 
     .pricing
@@ -358,21 +366,80 @@ block content
 
     .reviews
       .reviews__title ОТЗЫВЫ РОДСТВЕННИКОВ ПАЦИЕНТОВ
-      .reviews__items
-        .reviews__item
-          .reviews__left
-            .reviews__img
-              picture
-                source(srcset="./img/reviews-avatar01.webp" type="image/webp")
-                source(srcset="./img/reviews-avatar01.png" type="image/png")
-                img(src="" alt="img")
-            .reviews__name Михаил, Тольятти
-            .reviews__data 12 апреля, 2020
-          .reviews__right
-            .reviews__txt.
-              Сделали с женой огромную ошибку - отпустили нашего сына учиться в Ростов в университете. К сожалению, ему передались гены моего отца, и он не смог стать самостоятельным мужчиной в свои 19 лет. Поскольку я уже знал признаки алкоголизма и как не нужно
-              поступать с алкоголиками на примере отношений моей матери и отца, срочно привез сына домой...
-            a(href="#").reviews__btn Подробнее
+      .reviews__slider.swiper-container#reviews-slider
+        .reviews__items.swiper-wrapper
+          .reviews__item.swiper-slide
+            .reviews__item-content
+              .reviews__left
+                .reviews__img
+                  picture
+                    source(srcset="./img/reviews-avatar01.webp" type="image/webp")
+                    source(srcset="./img/reviews-avatar01.png" type="image/png")
+                    img(src="" alt="img")
+                .reviews__name Михаил, Тольятти
+                .reviews__data 12 апреля, 2020
+              .reviews__right
+                .reviews__txt.
+                  Сделали с женой огромную ошибку - отпустили нашего сына учиться в Ростов в университете. К сожалению, ему передались гены моего отца, и он не смог стать самостоятельным мужчиной в свои 19 лет. Поскольку я уже знал признаки алкоголизма и как не нужно
+                  поступать с алкоголиками на примере отношений моей матери и отца, срочно привез сына домой...
+                a(href="#").reviews__btn Подробнее
+
+          .reviews__item.swiper-slide
+            .reviews__item-content
+              .reviews__left
+                .reviews__img
+                  picture
+                    source(srcset="./img/reviews-avatar01.webp" type="image/webp")
+                    source(srcset="./img/reviews-avatar01.png" type="image/png")
+                    img(src="" alt="img")
+                .reviews__name Михаил, Тольятти
+                .reviews__data 12 апреля, 2020
+              .reviews__right
+                .reviews__txt.
+                  Сделали с женой огромную ошибку - отпустили нашего сына учиться в Ростов в университете. К сожалению, ему передались гены моего отца, и он не смог стать самостоятельным мужчиной в свои 19 лет. Поскольку я уже знал признаки алкоголизма и как не нужно
+                  поступать с алкоголиками на примере отношений моей матери и отца, срочно привез сына домой...
+                a(href="#").reviews__btn Подробнее
+
+          .reviews__item.swiper-slide
+            .reviews__item-content
+              .reviews__left
+                .reviews__img
+                  picture
+                    source(srcset="./img/reviews-avatar01.webp" type="image/webp")
+                    source(srcset="./img/reviews-avatar01.png" type="image/png")
+                    img(src="" alt="img")
+                .reviews__name Михаил, Тольятти
+                .reviews__data 12 апреля, 2020
+              .reviews__right
+                .reviews__txt.
+                  Сделали с женой огромную ошибку - отпустили нашего сына учиться в Ростов в университете. К сожалению, ему передались гены моего отца, и он не смог стать самостоятельным мужчиной в свои 19 лет. Поскольку я уже знал признаки алкоголизма и как не нужно
+                  поступать с алкоголиками на примере отношений моей матери и отца, срочно привез сына домой...
+                a(href="#").reviews__btn Подробнее
+
+          .reviews__item.swiper-slide
+            .reviews__item-content
+              .reviews__left
+                .reviews__img
+                  picture
+                    source(srcset="./img/reviews-avatar01.webp" type="image/webp")
+                    source(srcset="./img/reviews-avatar01.png" type="image/png")
+                    img(src="" alt="img")
+                .reviews__name Михаил, Тольятти
+                .reviews__data 12 апреля, 2020
+              .reviews__right
+                .reviews__txt.
+                  Сделали с женой огромную ошибку - отпустили нашего сына учиться в Ростов в университете. К сожалению, ему передались гены моего отца, и он не смог стать самостоятельным мужчиной в свои 19 лет. Поскольку я уже знал признаки алкоголизма и как не нужно
+                  поступать с алкоголиками на примере отношений моей матери и отца, срочно привез сына домой...
+                a(href="#").reviews__btn Подробнее
+
+        .site-container.swiper-relative
+          .swiper-pagination
+
+          .swiper-button-wrap
+            .swiper-button-prev
+              include ../img/ico/arrow-w.svg
+            .swiper-button-next
+              include ../img/ico/arrow-b.svg
 
 
 
