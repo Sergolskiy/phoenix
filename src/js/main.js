@@ -99,6 +99,50 @@ $(document).ready(function(){
   // });
 
 
+  var mySwiper = new Swiper ('#reviews-slider', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.45
+      },
+    }
+  });
+
+  var mySwiper = new Swiper ('#sertificate-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      992: {
+        slidesPerView: 4
+      },
+      768: {
+        slidesPerView: 3
+      },
+      550: {
+        slidesPerView: 2
+      },
+    }
+  });
+
+
   var phoneMask = $('input[data-valid="phone"]');
   $(phoneMask).inputmask('+7(999)999-99-99');
 

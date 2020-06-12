@@ -64,8 +64,9 @@ gulp.task('js', () => {
 gulp.task('css-libs', () => {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
-      'node_modules/owl.carousel/dist/assets/owl.carousel.css',
-      'node_modules/aos/dist/aos.css'
+      // 'node_modules/owl.carousel/dist/assets/owl.carousel.css',
+      'node_modules/aos/dist/aos.css',
+      'node_modules/swiper/css/swiper.min.css',
   ])
     .pipe(gulp.dest('dist/css/libs/'))
     .pipe(concat('libs.css'))
@@ -81,7 +82,8 @@ gulp.task('js-libs', () => {
       'node_modules/aos/dist/aos.js',
       'node_modules/blazy/blazy.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
-      'node_modules/owl.carousel/dist/owl.carousel.js',
+      // 'node_modules/owl.carousel/dist/owl.carousel.js',
+      'node_modules/swiper/js/swiper.min.js',
     ])
     .pipe(gulp.dest('dist/js/libs/'))
     .pipe(concat('libs.js'))
