@@ -10,6 +10,9 @@
 @mixin for-992 {
   @media (max-width: 992px) { @content; }
 }
+@mixin from-992 {
+  @media (min-width: 992px) { @content; }
+}
 @mixin for-1100 {
   @media (max-width: 1120px) { @content; }
 }
