@@ -101,6 +101,8 @@ ul,p{
     position: relative;
     width: 110%;
 
+
+
     &:after{
       content: attr(data-title);
       position: absolute;
@@ -111,7 +113,7 @@ ul,p{
       font-size: 11px;
       opacity: 0;
       font-weight: 700;
-      background: white;
+      //background: white;
       width: 100%;
     }
 
@@ -119,6 +121,10 @@ ul,p{
 
       &:after{
         opacity: 1;
+      }
+
+      span{
+        opacity: 0;
       }
     }
   }
