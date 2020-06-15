@@ -932,7 +932,7 @@ ul,p{
     border-radius: 50px 0 0 0;
     margin-top: 55px;
 
-    @include for-1100{
+    @media (max-width: 1120px){
       padding-left: 15px;
       padding-right: 15px;
     }
@@ -1310,11 +1310,20 @@ ul,p{
 
   &__content{
     display: flex;
+
+    @include for-550{
+      flex-direction: column;
+    }
   }
 
   &__img{
     width: 100%;
     max-width: 610px;
+
+    @include for-550{
+      width: calc(100% + 40px);
+      margin-left: -20px;
+    }
 
     img{
       width: 100%;
@@ -1324,6 +1333,10 @@ ul,p{
   &__txt{
     width: 100%;
     padding-top: 50px;
+
+    @include for-550{
+      padding-top: 15px;
+    }
 
     p{
       font-size: 14px;
@@ -2317,7 +2330,7 @@ ul,p{
       margin-left: -50px;
     }
 
-    @include from-1100{
+    @include for-1100{
       margin-left: 0;
     }
 
@@ -2510,6 +2523,10 @@ ul,p{
     max-width: 735px;
     margin-left: auto;
     margin-right: auto;
+
+    @include for-550{
+      margin-bottom: 30px;
+    }
   }
 
   &__caption{
@@ -2524,6 +2541,12 @@ ul,p{
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 40px;
+
+    @include for-550{
+      font-size: 20px;
+      line-height: 137%;
+      text-align: center;
+    }
   }
 
   &__subtitle{
@@ -2657,6 +2680,10 @@ ul,p{
     @include for-768{
       max-width: 92%;
       box-shadow: none;
+    }
+
+    @include for-550{
+      margin-top: 20%;
     }
 
     p{
@@ -3107,6 +3134,14 @@ ul,p{
   .top-block-service__content{
     display: flex;
     justify-content: space-between;
+
+    @include for-768{
+      flex-direction: column;
+
+      form{
+        margin: 0 auto;
+      }
+    }
   }
 
   .top-block__title{
