@@ -88,6 +88,13 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
 
+  $('.site-form__btn-i').click(function () {
+    if($(this).closest('form').find('input[type="tel"]').val().indexOf('_') === -1  && $(this).closest('form').find('input[type="text"]').val().length > 0){
+      $(this).closest('form').addClass('submitted');
+    }
+  });
+
+
 
 
   // $('.owl-carousel').owlCarousel({
@@ -176,7 +183,7 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '.popup', function (e) {
-    console.log(e.target.classList[0]);
+
     if(e.target.classList[0] == "popup") {
       $('.popup ').removeClass('open');
     }

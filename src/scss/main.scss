@@ -68,6 +68,7 @@ ul,p{
 }
 
 .site-h2{
+  position: relative;
   font-size: 30px;
   line-height: 41px;
   text-align: center;
@@ -694,6 +695,31 @@ ul,p{
 
   &--service{
 
+
+    .type-items__inner {
+      max-width: 100%;
+    }
+
+    .type-items__item{
+      width: auto;
+      max-width: initial;
+    }
+
+
+    .type-items__img{
+      background: #4A63FE;
+    }
+    .type-items__img:hover svg path{
+      fill: transparent;
+    }
+
+    .type-items__item:nth-child(n+4) .type-items__img:hover svg path{
+      fill: white;
+    }
+
+    .type-items__item:last-child .type-items__img:hover svg path{
+      stroke: transparent;
+    }
   }
 
   &__inner{
@@ -2363,4 +2389,24 @@ ul,p{
     }
   }
 
+}
+
+
+.pageservice{
+  .top-block {
+    padding-top: 155px;
+  }
+
+  .top-block__caption{
+    font-size: 20px;
+  }
+
+  .top-block-service__content{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-block__title{
+    margin-top: 65px;
+  }
 }

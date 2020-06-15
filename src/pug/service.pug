@@ -14,7 +14,9 @@ block content
     </picture>
 
   div.main-wrap
-    .top-block.top-block-service-page.webp-img.b-lazy(data-webp="./img/service-top-bg.webp" data-img="./img/service-top-bg.jpg")
+    .top-block.top-block-service-page
+      .top-block__bg-img-wrap
+        img(src="./img/service-top-bg.jpg").top-block__bg-img
       .top-block__inner.site-container
         .top-block-service__content
           .top-block-service__txt
@@ -23,7 +25,7 @@ block content
               .top-block__call
                 .top-block__call-left
                   a(href="tel:+79170362600") +7 (917) 036 26 00
-                  span Бесплатная консультация (24/7)
+                  a(href="#" data-modal-class="callback") Бесплатная консультация (24/7)
             h1.top-block__title.site-title <strong>Вывод из запоя в Самаре</strong>
             .top-block__caption круглосуточно, быстро и анонимно
           .top-block-service__form
