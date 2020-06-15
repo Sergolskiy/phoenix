@@ -285,7 +285,7 @@ block content
               .check-item Специалисты обеспечат поддержку на протяжении всего периода лечения, а также дистанционно после него.
               .check-item Курс лечения оканчивается реабилитацией, которая поможет избежать рецидива заболевания.
           .warrranty__right
-            .warrranty__img
+            a(href="#").warrranty__img
               picture
                 source(srcset="./img/video-preview-img.webp" type="image/webp")
                 source(srcset="./img/video-preview-img.png" type="image/png")
@@ -293,37 +293,37 @@ block content
               .warrranty__img-play
                 include ../img/ico/play.svg
 
-        .warrranty__bottom Наркологический центр <b>«Феникс»</b> в Самаре и Самарской области использует только современные методики, которые доказали свою эффективность, а медицинский персонал регулярно доказывает свой профессионализм победами над пагубными привычками.
+      .warrranty__bottom.site-container Наркологический центр <b>«Феникс»</b> в Самаре и Самарской области использует только современные методики, которые доказали свою эффективность, а медицинский персонал регулярно доказывает свой профессионализм победами над пагубными привычками.
 
 
     .sertificate
       .sertificate__inner.site-container
-        .sertificate__title ЛИЦЕНЗИЯ И СЕРТИФИКАТЫ
+        .sertificate__content
+          .sertificate__title ЛИЦЕНЗИЯ И СЕРТИФИКАТЫ
           .sertificate-slider.swiper-container#sertificate-slider
             .sertificate__items.swiper-wrapper
-              .sertificate__item.swiper-slide
+              a(href="./img/sertific01.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific01.webp" type="image/webp")
                   source(srcset="./img/sertific01.png" type="image/png")
                   img(src="" alt="img")
-              .sertificate__item.swiper-slide
+              a(href="./img/sertific02.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific02.webp" type="image/webp")
                   source(srcset="./img/sertific02.png" type="image/png")
                   img(src="" alt="img")
-              .sertificate__item.swiper-slide
+              a(href="./img/sertific03.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific03.webp" type="image/webp")
                   source(srcset="./img/sertific03.png" type="image/png")
                   img(src="" alt="img")
-              .sertificate__item.swiper-slide
+              a(href="./img/sertific04.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific04.webp" type="image/webp")
                   source(srcset="./img/sertific04.png" type="image/png")
                   img(src="" alt="img")
 
-            .site-container.swiper-relative
-              .swiper-pagination
+            .site-container
 
               .swiper-button-wrap
                 .swiper-button-prev
