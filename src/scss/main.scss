@@ -696,20 +696,54 @@ ul,p{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    max-width: 890px;
+    margin: 0 auto;
   }
 
   &__item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 20%;
+
+    &:last-child{
+      .type-items__img:hover svg path{
+        fill: transparent;
+        stroke: white;
+      }
+    }
   }
 
   &__img{
+    width: 76px;
+    height: 74px;
+    background: white;
+    box-shadow: 0 7px 15px rgba(74, 99, 254, 0.25);
+    border-radius: 11px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    svg path{
+      transition: 0.3s;
+    }
+
+    &:hover{
+      background: #4A63FE;
+
+      svg path{
+        fill: white;
+      }
+    }
   }
 
   &__txt{
     text-align: center;
+    font-size: 12px;
   }
 
 }
