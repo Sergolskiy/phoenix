@@ -18,6 +18,10 @@ a:hover{
   outline: 0;
 }
 
+h2{
+  margin-top: 0;
+}
+
 button{
   outline: 0;
 }
@@ -60,11 +64,29 @@ ul,p{
   list-style: none;
 }
 
+.mobile-content{
+  display: none;
+
+  @include for-768{
+    display: initial;
+  }
+}
+
+.desctop{
+  @include for-768{
+    display: none;
+  }
+}
+
 /*site style start*/
 .site-title{
   font-size: 40px;
   line-height: 48px;
   color: #000000;
+
+  @include for-1200{
+    font-size: 35px;
+  }
 }
 
 .site-h2{
@@ -80,6 +102,7 @@ ul,p{
   @include for-768{
     font-size: 20px;
     line-height: 27px;
+    margin-bottom: 15px;
   }
 
   &--white{
@@ -94,6 +117,10 @@ ul,p{
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 60px;
+
+  @include for-768{
+    font-size: 14px;
+  }
 }
 
 .site-container{
@@ -251,6 +278,10 @@ ul,p{
   display: flex;
   flex-direction: column;
   padding: 0 25px;
+
+  @include for-768{
+    padding: 0;
+  }
 }
 
 .check-item{
@@ -616,6 +647,14 @@ ul,p{
 .top-block{
   padding-top: 200px;
 
+  @include for-1200{
+    padding-top: 150px;
+  }
+
+  @include for-768{
+    padding-top: 85px;
+  }
+
   &__bg-img-wrap{
     position: absolute;
     top: 0;
@@ -642,26 +681,51 @@ ul,p{
   &__inner{
     position: relative;
     z-index: 1;
+
+    @include for-768{
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__title{
     margin-bottom: 20px;
     margin-top: 0;
+
+    @include for-768{
+      font-size: 26px;
+      line-height: 120%;
+    }
   }
 
   &__caption{
     font-size: 14px;
     line-height: 26px;
     margin-bottom: 50px;
+
+    @include for-768{
+      display: none;
+    }
   }
 
   &__office{
     font-size: 15px;
     line-height: 18px;
+
+    @include for-768{
+      order: -1;
+      margin-bottom: 100px;
+      font-size: 14px;
+    }
   }
 
   &__call{
     margin-top: 25px;
+
+    @include for-768{
+      order: -2;
+      margin: 0;
+    }
   }
 
   &__call-inner{
@@ -680,23 +744,41 @@ ul,p{
         font-size: 20px;
         color: black;
         margin-bottom: 5px;
+
+        @include for-768{
+          line-height: 120%;
+          color: #FF0000;
+          margin-bottom: 14px;
+        }
       }
 
       &:last-child{
         color: #0170DD;
         font-size: 9px;
         line-height: 11px;
+
+        @include for-768{
+          display: none;
+        }
       }
     }
   }
 
   &__call-btn{
     min-width: 220px;
+
+    @include for-768{
+      display: none;
+    }
   }
 }
 
 .type-items{
   margin-top: 60px;
+
+  @include for-768{
+    display: none;
+  }
 
   &--service{
 
@@ -864,6 +946,15 @@ ul,p{
   &__left-img{
     float: left;
 
+    @include for-768{
+      margin-right: 15px;
+    }
+
+    @include for-550{
+      width: 100%;
+      margin-right: 0;
+    }
+
     img{
       width: 100%;
     }
@@ -894,12 +985,28 @@ ul,p{
       display: block;
       padding-top: 70px;
       margin-bottom: 40px;
+
+      @include for-768{
+        font-size: 16px;
+        line-height: 140%;
+        padding-top: 30px;
+      }
     }
 
     p{
       font-size: 14px;
       line-height: 25px;
       margin-bottom: 40px;
+
+      @include for-768{
+        font-size: 12px;
+        line-height: 180%;
+      }
+
+      b{
+        display: block;
+        margin-bottom: 10px;
+      }
     }
 
     &:after {
@@ -914,6 +1021,12 @@ ul,p{
 
 
 .about{
+
+  padding-top: 90px;
+
+  @include for-768{
+    padding-top: 60px;
+  }
 
   &__inner{
 
@@ -1157,6 +1270,17 @@ ul,p{
     padding-bottom: 45px;
     padding-left: 20px;
     padding-right: 20px;
+
+    @include for-1200{
+      border-left: 0;
+      border-right: 0;
+    }
+
+    @include for-768{
+      padding-top: 45px;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__title{
@@ -1169,14 +1293,40 @@ ul,p{
     max-width: 850px;
     margin-bottom: 40px;
     padding: 0 25px;
+
+    @include for-768{
+      font-size: 20px;
+      line-height: 137%;
+      padding: 0;
+    }
   }
 
   &__txt{
     display: flex;
+
+    @include for-768{
+      flex-direction: column;
+    }
   }
 
   &__left{
     width: 50%;
+    position: relative;
+
+    @include for-768{
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: -20px;
+        width: calc(100% + 40px);
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+      }
+    }
   }
 
   &__check{
@@ -1185,12 +1335,20 @@ ul,p{
 
       &:before {
         top: 5px;
+
+        @include for-768{
+          top: 1px;
+        }
       }
     }
   }
 
   &__right{
     width: 50%;
+
+    @include for-768{
+      width: 100%;
+    }
   }
 
   &__img{
@@ -1198,6 +1356,10 @@ ul,p{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img{
+      max-width: 100%;
+    }
   }
 
   &__img-play{
@@ -1217,6 +1379,10 @@ ul,p{
     padding-top: 30px;
     max-width: 770px;
     padding-bottom: 90px;
+
+    @include for-768{
+      padding-bottom: 55px;
+    }
   }
 
 }
@@ -1717,6 +1883,11 @@ ul,p{
     display: flex;
     flex-wrap: wrap;
     padding: 40px 15px 25px 60px;
+
+    @include for-768{
+      flex-direction: column;
+      padding: 55px 15px 60px 20px;
+    }
   }
 
   &__top-txt{
@@ -1733,7 +1904,21 @@ ul,p{
       height: calc(100% + 40px);
       background: #6177FF;
       box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.1);
+
+      @include for-768{
+        height: calc(100% + 60px);
+      }
     }
+
+    @include for-1200{
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include for-768{
+      width: 100%;
+    }
+
   }
 
   &__top-txt-title{
@@ -1745,6 +1930,17 @@ ul,p{
     margin-right: 30px;
     position: relative;
     z-index: 2;
+
+    @include for-1200{
+      font-size: 30px;
+      line-height: 34px;
+      margin-right: 0;
+    }
+
+    @include for-768{
+      font-size: 32px;
+      line-height: 108%;
+    }
   }
 
   &__top-txt-desc{
@@ -1754,6 +1950,12 @@ ul,p{
     color: white;
     position: relative;
     z-index: 2;
+
+    @include for-768{
+      margin-top: 10px;
+      font-size: 21px;
+      line-height: 137%;
+    }
   }
 
   &__top-phone{
@@ -1761,6 +1963,11 @@ ul,p{
     flex-direction: column;
     width: 37%;
     align-items: center;
+
+    @include for-768{
+      order: 10;
+      width: 100%;
+    }
   }
 
   &__top-phone-i{
@@ -1772,6 +1979,16 @@ ul,p{
     display: flex;
     transition: .2s;
 
+    @include for-1200{
+      font-size: 30px;
+      line-height: 23px;
+    }
+
+    @include for-768{
+      margin-top: 40px;
+      margin-bottom: 25px;
+    }
+
     &:hover{
       color: #FF0000;
     }
@@ -1780,9 +1997,18 @@ ul,p{
   &__top-phone-btn{
     max-width: 300px;
 
+    @include for-1200{
+      max-width: 280px;
+    }
+
     span{
       font-size: 16px;
       line-height: 43px;
+
+      @include for-1200{
+        font-size: 15px;
+        line-height: 46px;
+      }
     }
 
   }
@@ -1793,6 +2019,12 @@ ul,p{
     letter-spacing: 0.01em;
     color: #FFFFFF;
     margin-top: 15px;
+
+    @include for-768{
+      font-size: 12px;
+      line-height: 137%;
+      margin-top: 20px;
+    }
   }
 
 }
@@ -2004,6 +2236,11 @@ ul,p{
     font-size: 20px;
     letter-spacing: 0.01em;
     margin-bottom: 75px;
+
+    @include for-768{
+      margin-bottom: 40px;
+      text-align: center;
+    }
   }
 
   &__service-items{
@@ -2018,6 +2255,11 @@ ul,p{
     padding-left: 100px;
     margin-bottom: 62px;
 
+    @include for-768{
+      width: 100%;
+      padding-left: 80px;
+    }
+
     &:before{
       content: counter(step-counter);
       display: inline-block;
@@ -2031,6 +2273,11 @@ ul,p{
       letter-spacing: 0.01em;
       color: #4A63FE;
       padding-left: 20px;
+
+      @include for-768{
+        padding-left: 0;
+        width: 54px;
+      }
     }
 
 
@@ -2056,6 +2303,11 @@ ul,p{
     margin-top: -10px;
     line-height: 137%;
     margin-bottom: 90px;
+
+    @include for-768{
+      margin-top: -40px;
+      margin-bottom: 55px;
+    }
   }
 
 }
@@ -2067,6 +2319,11 @@ ul,p{
   &__inner{
     padding-top: 90px;
     padding-bottom: 100px;
+
+    @include for-768{
+      padding-top: 55px;
+      padding-bottom: 30px;
+    }
   }
 
   &__title{
@@ -2096,11 +2353,21 @@ ul,p{
     letter-spacing: 0.01em;
     color: #000000;
     margin-bottom: 55px;
+
+    @include for-768{
+      font-size: 20px;
+      line-height: 137%;
+      text-align: center;
+    }
   }
 
   &__desc{
     display: flex;
     justify-content: space-between;
+
+    @include for-768{
+      flex-direction: column;
+    }
   }
 
   &__left{
@@ -2120,6 +2387,10 @@ ul,p{
 
     &:last-child{
       margin-bottom: 0;
+    }
+
+    @include for-768{
+      margin-bottom: 30px;
     }
   }
 
@@ -2176,6 +2447,11 @@ ul,p{
     position: relative;
     display: flex;
     justify-content: flex-end;
+
+    @include for-768{
+      margin-top: 30px;
+      max-width: 100%;
+    }
   }
 
   &__img{
@@ -2198,6 +2474,11 @@ ul,p{
     margin-top: 175px;
     height: fit-content;
 
+    @include for-768{
+      max-width: 92%;
+      box-shadow: none;
+    }
+
     p{
       margin-bottom: 50px;
       font-size: 14px;
@@ -2219,6 +2500,9 @@ ul,p{
 
   &__inner{
 
+    @include for-768{
+      padding: 0;
+    }
   }
 
   &__title{
@@ -2249,6 +2533,16 @@ ul,p{
     &:nth-last-child(1),
     &:nth-last-child(2){
       border: 0.5px solid rgba(0, 0, 0, 0.3);
+    }
+
+    @include for-768{
+      width: 100%;
+      border-left: 0;
+      border-right: 0;
+
+      &:nth-child(odd){
+        margin-right: 0;
+      }
     }
   }
 
@@ -2594,6 +2888,10 @@ ul,p{
   &__callback-form{
     padding: 30px 70px 55px;
     position: relative;
+
+    @include for-550{
+      padding: 20px 18px;
+    }
 
     form.site-form{
       padding: 0;

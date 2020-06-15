@@ -160,9 +160,13 @@ block content
         .about__txt.site-text-block
           .site-text-block__txt
             .site-text-block__left-img
-              picture
+              picture.desctop
                 source(srcset="./img/about-img01.webp" type="image/webp")
                 source(srcset="./img/about-img01.png" type="image/png")
+                img(src="" alt="img")
+              picture.mobile-content
+                source(srcset="./img/about-mob.webp" type="image/webp")
+                source(srcset="./img/about-mob.png" type="image/png")
                 img(src="" alt="img")
             p.
               <span>Анонимный наркологический центр в Самаре «Феникс» давно работает в сфере лечения наркотической, алкогольной и других видов зависимостей.</span>
@@ -262,9 +266,13 @@ block content
                   .narco-help__item-txt в стационаре и на дому. Проводится при необходимости срочно прийти в трезвое состояние, а также в случае отравления этилом.
           .narco-help__right
             .narco-help__img
-              picture
+              picture.desctop
                 source(srcset="./img/services-clinic-img01.webp" type="image/webp")
                 source(srcset="./img/services-clinic-img01.png" type="image/png")
+                img(src="" alt="img")
+              picture.mobile-content
+                source(srcset="./img/narco-mob.webp" type="image/webp")
+                source(srcset="./img/narco-mob.png" type="image/png")
                 img(src="" alt="img")
             .narco-help__txt
               p.
