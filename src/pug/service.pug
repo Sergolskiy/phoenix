@@ -14,87 +14,103 @@ block content
     </picture>
 
   div.main-wrap
-    .top-block.top-block-service-page
-      .top-block__bg-img-wrap
-        img(src="./img/service-top-bg.jpg").top-block__bg-img
-      .top-block__inner.site-container
-        .top-block-service__content
-          .top-block-service__txt
-            .top-block__office г. Самара, ул. Физкультурная 90-А, офис 314
-            .top-block__call
+    .service-top
+      .top-block.top-block-service-page
+        .top-block__bg-img-wrap
+          picture
+            source(srcset="./img/service-top-bg.webp" type="image/webp")
+            source(srcset="./img/service-top-bg.png" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img").top-block__bg-img
+          picture
+            source(srcset="./img/serv-bg-mob.webp" type="image/webp")
+            source(srcset="./img/serv-bg-mob.jpg" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img").top-block__bg-img.mob
+        .top-block__inner.site-container
+          .top-block-service__content
+            .top-block-service__txt
+              .top-block__office г. Самара, ул. Физкультурная 90-А, офис 314
               .top-block__call
-                .top-block__call-left
-                  a(href="tel:+79170362600") +7 (917) 036 26 00
-                  a(href="#" data-modal-class="callback") Бесплатная консультация (24/7)
-            h1.top-block__title.site-title <strong>Вывод из запоя в Самаре</strong>
-            .top-block__caption круглосуточно, быстро и анонимно
-          .top-block-service__form
-            form.site-form
-              .site-form__title Быстро избавим от запоя
-              .site-form__caption Врач приедет в течении часа
-              .site-form__row
-                .site-form__input
-                  input(type="text" placeholder="Ваше имя")
-              .site-form__row
-                .site-form__input
-                  input(type="tel" inputmode="numeric" placeholder="+7(___)___-__-__" data-valid="phone")
-              .site-form__btn
-                a(href="javascript:void(0);").site-btn.submit-btn.site-form__btn-i
-                  span Заказать звонок
+                .top-block__call
+                  .top-block__call-left
+                    a(href="tel:+79170362600") +7 (917) 036 26 00
+                    a(href="#" data-modal-class="callback") Бесплатная консультация (24/7)
+              h1.top-block__title.site-title <strong>Вывод из запоя в Самаре</strong>
+              .top-block__caption круглосуточно, быстро и анонимно
+            .top-block-service__form
+              form.site-form
+                .site-form__title Быстро избавим от запоя
+                .site-form__caption Врач приедет в течении часа
+                .site-form__row
+                  .site-form__input
+                    input(type="text" placeholder="Ваше имя")
+                .site-form__row
+                  .site-form__input
+                    input(type="tel" inputmode="numeric" placeholder="+7(___)___-__-__" data-valid="phone")
+                .site-form__btn
+                  a(href="javascript:void(0);").site-btn.submit-btn.site-form__btn-i
+                    span Заказать звонок
+              .site-form-submit
+                .site-form-submit__img
+                  img(src="./img/ico/sun.svg" alt="img").site-form-submit__img-i
+                .site-form-submit__title Быстро избавим от запоя
+                .site-form-submit__caption Врач приедет в течении часа
 
-        .type-items.type-items--service
-          .type-items__inner
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico01.svg
-              .type-items__txt Выезд <br> врача-нарколога <br> к пациенту на дом
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico02.svg
-              .type-items__txt Консультация <br> и обследование <br> специалиста
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico03.svg
-              .type-items__txt Подбор <br> индивидуального <br> плана лечения
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico04.svg
-              .type-items__txt Проведение <br> процедуры по <br> детоксикации
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico05.svg
-              .type-items__txt Проведение <br> восстановительной <br> терапии
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico06.svg
-              .type-items__txt Назначение <br> лечения на первые <br> 3 дня
-            .type-items__item
-              .type-items__img
-                include ../img/ico/services-ico07.svg
-              .type-items__txt Поддержка <br> до полной <br> нормализации
+          .type-items.type-items--service
+            .type-items__inner
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico01.svg
+                .type-items__txt Выезд <br> врача-нарколога <br> к пациенту на дом
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico02.svg
+                .type-items__txt Консультация <br> и обследование <br> специалиста
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico03.svg
+                .type-items__txt Подбор <br> индивидуального <br> плана лечения
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico04.svg
+                .type-items__txt Проведение <br> процедуры по <br> детоксикации
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico05.svg
+                .type-items__txt Проведение <br> восстановительной <br> терапии
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico06.svg
+                .type-items__txt Назначение <br> лечения на первые <br> 3 дня
+              .type-items__item
+                .type-items__img
+                  include ../img/ico/services-ico07.svg
+                .type-items__txt Поддержка <br> до полной <br> нормализации
 
-    .breadcrumbs
-      .site-container.breadcrumbs__inner
-        .breadcrumbs__list
-          a(href="#").breadcrumbs__link Главная
-          a(href="javascript:void(0);").breadcrumbs__link Вывод из запоя на дому
+      .breadcrumbs
+        .site-container.breadcrumbs__inner
+          .breadcrumbs__list
+            a(href="#").breadcrumbs__link Главная
+            a(href="javascript:void(0);").breadcrumbs__link Вывод из запоя на дому
 
-    .site-container
-      h2.site-h2 экспресс вывод из запоя
-      .site-tabs
-        a(href="").site-tabs__item Стандарт
-        a(href="").site-tabs__item Комфорт
-        a(href="").site-tabs__item VIP
+
 
     .about
       .about__inner.site-container
-        h2.about__title.site-h2 О НАШЕМ НАРКОЛОГИЧЕСКОМ ЦЕНТРЕ
+        h2.site-h2 экспресс вывод из запоя
+        .site-tabs
+          a(href="").site-tabs__item Стандарт
+          a(href="").site-tabs__item Комфорт
+          a(href="").site-tabs__item VIP
         .about__txt.site-text-block
           .site-text-block__txt
             .site-text-block__left-img
-              picture
+              picture.desctop
                 source(srcset="./img/express-img01.webp" type="image/webp")
                 source(srcset="./img/express-img01.png" type="image/png")
+                img(src="" alt="img")
+              picture.mobile-content
+                source(srcset="./img/serv-ex.webp" type="image/webp")
+                source(srcset="./img/serv-ex.png" type="image/png")
                 img(src="" alt="img")
             p
               | Запой является тяжелым состоянием человека, которое характеризуется сильной интоксикацией от злоупотребления алкоголя за период длительного и беспрерывного времени. Если игнорировать

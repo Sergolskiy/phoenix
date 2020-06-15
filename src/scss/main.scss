@@ -105,6 +105,10 @@ ul,p{
     margin-bottom: 15px;
   }
 
+  @include for-550{
+    letter-spacing: 0;
+  }
+
   &--white{
     color: white;
   }
@@ -311,6 +315,7 @@ ul,p{
 .site-tabs{
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 
   &__item{
     font-size: 16px;
@@ -320,6 +325,12 @@ ul,p{
     padding: 0 35px;
     position: relative;
     transition: .2s;
+
+    @include for-550{
+      font-size: 14px;
+      line-height: 90%;
+      padding: 0 15px;
+    }
 
     &:hover{
       color: #4A63FE;
@@ -671,6 +682,10 @@ ul,p{
       height: 100%;
       width: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 90.97%);
+
+      @include for-550{
+        display: none;
+      }
     }
   }
 
@@ -881,8 +896,12 @@ ul,p{
   position: relative;
   z-index: 1;
 
+  @include for-768{
+    order: -1;
+  }
+
   &__inner{
-    padding: 35px 0 64px;
+    padding: 35px 15px 64px;
   }
 
   &__list{
@@ -1031,10 +1050,27 @@ ul,p{
 
   &__left-img{
     float: left;
+    margin-left: -30px;
+    margin-bottom: -22px;
 
     @include for-768{
       margin-right: 15px;
     }
+
+    @include for-550{
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &__right-img{
+    float: right;
+    margin-right: -30px;
 
     @include for-550{
       width: 100%;
@@ -1046,16 +1082,14 @@ ul,p{
     }
   }
 
-  &__right-img{
-    float: right;
-
-    img{
-      width: 100%;
-    }
-  }
-
   &__w100-img{
     width: 100%;
+    width: calc(100% + 60px);
+    margin-left: -30px;
+
+    @include for-768{
+      display: none;
+    }
 
     img{
       width: 100%;
@@ -1107,7 +1141,7 @@ ul,p{
 
 
 .about{
-
+  position: relative;
   padding-top: 90px;
 
   @include for-768{
@@ -1136,6 +1170,7 @@ ul,p{
 
 .course{
   padding-bottom: 130px;
+  margin-top: 50px;
 
   &__inner{
 
@@ -3121,6 +3156,10 @@ ul,p{
 
 }
 
+.service-top{
+  display: flex;
+  flex-direction: column;
+}
 
 .pageservice{
   .top-block {
@@ -3147,4 +3186,70 @@ ul,p{
   .top-block__title{
     margin-top: 65px;
   }
+
+  .site-text-block__txt p:nth-child(2){
+    padding-top: 65px;
+  }
+
+  .site-text-block__txt p{
+    margin-bottom: 60px;
+
+    @include for-550{
+      margin-bottom: 35px;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-768{
+    .breadcrumbs__inner {
+      padding: 80px 15px 10px;
+    }
+
+    .top-block{
+      padding-top: 0;
+    }
+
+    .top-block__office{
+      margin-bottom: 0;
+      display: none;
+    }
+
+    .top-block__call{
+      display: none;
+    }
+
+    .top-block__title{
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .top-block__caption{
+      display: block;
+      font-size: 10px;
+      line-height: 120%;
+    }
+  }
+
+  .top-block-service__form{
+    position: relative;
+    .site-form-submit {
+      padding: 25px 17px 25px;
+      border-radius: 18px 0;
+    }
+  }
+
+  .about:nth-child(2){
+    padding-top: 0;
+    @include for-768{
+      padding-top: 90px;
+    }
+  }
+
+}
+
+.error-field input{
+  border-color: red !important;
 }
