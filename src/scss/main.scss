@@ -865,7 +865,48 @@ ul,p{
 
 }
 
+.breadcrumbs{
+  position: relative;
+  z-index: 1;
 
+  &__inner{
+    padding: 35px 0 64px;
+  }
+
+  &__list{
+
+  }
+
+  &__link{
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration-line: underline;
+    color: #473038;
+    margin-right: 50px;
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+      right: -28px;
+      top: 4px;
+      width: 6px;
+      height: 6px;
+      background: url("../img/ico/arrow-b.svg") center no-repeat;
+      background-size: contain;
+    }
+
+    &:last-child{
+      text-decoration: none;
+      cursor: auto;
+      margin-right: 0;
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
 
 .servise{
   position: relative;
