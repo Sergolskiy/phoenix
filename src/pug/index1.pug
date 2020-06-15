@@ -17,7 +17,14 @@ block content
   div.main-wrap
     .top-block.webp-img
       .top-block__bg-img-wrap
-        img(src="./img/index-top-bg.jpg").top-block__bg-img
+        picture
+          source(srcset="./img/index-top-bg.webp" type="image/webp")
+          source(srcset="./img/index-top-bg.png" type="image/png")
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img").top-block__bg-img
+        picture
+          source(srcset="./img/top-mob.webp" type="image/webp")
+          source(srcset="./img/top-mob.png" type="image/png")
+          img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img").top-block__bg-img.mob
       .top-block__inner.site-container
         h1.top-block__title.site-title Лечение наркомании и алкоголизма в наркологическом центре <b> «Феникс» </b>
         .top-block__caption Наркологический центр в Самаре и Самарской области «Феникс»
@@ -63,7 +70,7 @@ block content
               picture
                 source(srcset="./img/services-img01.webp" type="image/webp")
                 source(srcset="./img/services-img01.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Вывод из запоя на дому и в клинике
               .servise__txt Снятие абстинентного синдрома при алкоголизме.
@@ -73,7 +80,7 @@ block content
               picture
                 source(srcset="./img/services-img02.webp" type="image/webp")
                 source(srcset="./img/services-img02.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name УБОД
               .servise__txt Ультрабыстрая опиоидная детоксикация. Только в условиях клиники.
@@ -83,7 +90,7 @@ block content
               picture
                 source(srcset="./img/services-img03.webp" type="image/webp")
                 source(srcset="./img/services-img03.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Кодирование / Подшивание
               .servise__txt Создание отрицательного рефлекса на алкоголь.
@@ -93,7 +100,7 @@ block content
               picture
                 source(srcset="./img/services-img04.webp" type="image/webp")
                 source(srcset="./img/services-img04.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Вызов нарколога на дом
               .servise__txt Круглосуточная наркологическая помощь на дому.
@@ -103,7 +110,7 @@ block content
               picture
                 source(srcset="./img/services-img05.webp" type="image/webp")
                 source(srcset="./img/services-img05.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Снятие ломки
               .servise__txt Снятие абстинентного синдрома при наркомании.        Только в условиях клиники.
@@ -113,7 +120,7 @@ block content
               picture
                 source(srcset="./img/services-img06.webp" type="image/webp")
                 source(srcset="./img/services-img06.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Детоксикация
               .servise__txt Очищение организма от токсичных веществ при алкоголизме или наркомании. Чистка крови.
@@ -123,7 +130,7 @@ block content
               picture
                 source(srcset="./img/services-img07.webp" type="image/webp")
                 source(srcset="./img/services-img07.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Реабилитация в стационаре
               .servise__txt Психо-социальная реабилитации в закрытом стационаре по программе              «12 шагов».
@@ -133,7 +140,7 @@ block content
               picture
                 source(srcset="./img/services-img08.webp" type="image/webp")
                 source(srcset="./img/services-img08.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .servise__desc
               .servise__name Мотивация  зависимых на лечение
               .servise__txt Если зависимый не хочет лечится или не признает проблему. Поможем убедить.
@@ -162,11 +169,11 @@ block content
               picture.desctop
                 source(srcset="./img/about-img01.webp" type="image/webp")
                 source(srcset="./img/about-img01.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               picture.mobile-content
                 source(srcset="./img/about-mob.webp" type="image/webp")
                 source(srcset="./img/about-mob.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             p.
               <span>Анонимный наркологический центр в Самаре «Феникс» давно работает в сфере лечения наркотической, алкогольной и других видов зависимостей.</span>
               Наше учреждение является одним из самых успешных медицинских клиник, которые готовы оказать любую экстренную наркологическую помощь на любой стадии зависимости. Наши филиалы расположены на всей территории Самарской области. Все центры оснащены комфортабельными условиями стационара и всем необходимым для полноценного лечения и реабилитации. Квалифицированный штат сотрудников состоит из дипломированных психологов, психиатров, психотерапевтов, наркологов и реабилитологов, которые доказали свой профессионализм множеством пациентов, вернувшихся к здоровой жизни.
@@ -268,11 +275,11 @@ block content
               picture.desctop
                 source(srcset="./img/services-clinic-img01.webp" type="image/webp")
                 source(srcset="./img/services-clinic-img01.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               picture.mobile-content
                 source(srcset="./img/narco-mob.webp" type="image/webp")
                 source(srcset="./img/narco-mob.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
             .narco-help__txt
               p.
                 Неотложная скорая помощь наркологического центра <b>«Феникс»</b> анонимна и проводится в тайне от посторонних. Данные о зависимости никуда не передаются.
@@ -297,7 +304,7 @@ block content
               picture
                 source(srcset="./img/video-preview-img.webp" type="image/webp")
                 source(srcset="./img/video-preview-img.png" type="image/png")
-                img(src="" alt="img")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               .warrranty__img-play
                 include ../img/ico/play.svg
 
@@ -314,22 +321,22 @@ block content
                 picture
                   source(srcset="./img/sertific01.webp" type="image/webp")
                   source(srcset="./img/sertific01.png" type="image/png")
-                  img(src="" alt="img")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               a(href="./img/sertific02.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific02.webp" type="image/webp")
                   source(srcset="./img/sertific02.png" type="image/png")
-                  img(src="" alt="img")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               a(href="./img/sertific03.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific03.webp" type="image/webp")
                   source(srcset="./img/sertific03.png" type="image/png")
-                  img(src="" alt="img")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
               a(href="./img/sertific04.png").sertificate__item.swiper-slide
                 picture
                   source(srcset="./img/sertific04.webp" type="image/webp")
                   source(srcset="./img/sertific04.png" type="image/png")
-                  img(src="" alt="img")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
 
             .site-container
 
@@ -385,7 +392,7 @@ block content
                   picture
                     source(srcset="./img/reviews-avatar01.webp" type="image/webp")
                     source(srcset="./img/reviews-avatar01.png" type="image/png")
-                    img(src="" alt="img")
+                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
                 .reviews__name Михаил, Тольятти
                 .reviews__data 12 апреля, 2020
               .reviews__right
@@ -401,7 +408,7 @@ block content
                   picture
                     source(srcset="./img/reviews-avatar01.webp" type="image/webp")
                     source(srcset="./img/reviews-avatar01.png" type="image/png")
-                    img(src="" alt="img")
+                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
                 .reviews__name Михаил, Тольятти
                 .reviews__data 12 апреля, 2020
               .reviews__right
@@ -417,7 +424,7 @@ block content
                   picture
                     source(srcset="./img/reviews-avatar01.webp" type="image/webp")
                     source(srcset="./img/reviews-avatar01.png" type="image/png")
-                    img(src="" alt="img")
+                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
                 .reviews__name Михаил, Тольятти
                 .reviews__data 12 апреля, 2020
               .reviews__right
@@ -433,7 +440,7 @@ block content
                   picture
                     source(srcset="./img/reviews-avatar01.webp" type="image/webp")
                     source(srcset="./img/reviews-avatar01.png" type="image/png")
-                    img(src="" alt="img")
+                    img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
                 .reviews__name Михаил, Тольятти
                 .reviews__data 12 апреля, 2020
               .reviews__right
