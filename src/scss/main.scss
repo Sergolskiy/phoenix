@@ -76,6 +76,11 @@ ul,p{
   color: #000000;
   margin-bottom: 30px;
 
+  @include for-768{
+    font-size: 20px;
+    line-height: 27px;
+  }
+
   &--white{
     color: white;
   }
@@ -1129,6 +1134,10 @@ ul,p{
     background: #4A63FE;
     border-radius: 50px 0px;
     padding: 45px 70px 50px;
+
+    @include for-768{
+      padding: 45px 30px 0;
+    }
   }
 
   &__title{
@@ -1139,6 +1148,12 @@ ul,p{
     text-transform: uppercase;
     color: #FFFFFF;
     text-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+
+    @include for-768{
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center
+    }
   }
 
   &__content{
@@ -1161,6 +1176,7 @@ ul,p{
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     &:hover{
@@ -1178,6 +1194,10 @@ ul,p{
 
 #sertificate-slider{
   overflow: initial!important;
+
+  @include for-768{
+    padding-bottom: 150px;
+  }
 
   .swiper-relative{
     position: relative;
@@ -1201,6 +1221,14 @@ ul,p{
     right: 30px;
     left: auto;
     position: absolute;
+
+    @include for-768{
+      right: auto;
+      top: auto;
+      bottom: 100px;
+      left: calc(50% + 40px);
+      transform: translateX(-50%);
+    }
   }
 
   .swiper-button-prev{
@@ -1209,10 +1237,19 @@ ul,p{
     width: 40px;
     height: 40px;
     opacity: 1;
+    border-radius: 50%;
+    transition: .2s;
 
     &:hover{
+      box-shadow: 0px 7px 15px rgba(124, 135, 237, 0.25);
+      background-color: #FFFFFF;
+
       svg{
         transform: scale(0.9);
+
+        path{
+          fill: black
+        }
       }
     }
 
@@ -1220,7 +1257,7 @@ ul,p{
       transition: .2s;
 
       path{
-        fill: #DBDBDB;
+        fill: white;
       }
     }
 
@@ -1233,16 +1270,21 @@ ul,p{
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: #FFFFFF;
+    //background-color: #FFFFFF;
     border-radius: 50%;
     transition: .2s;
     box-shadow: 0px 7px 15px -5px rgba(124, 135, 237, 0.25);
 
     &:hover{
       box-shadow: 0px 7px 15px rgba(124, 135, 237, 0.25);
+      background-color: #FFFFFF;
 
       svg{
         transform: scale(0.9);
+
+        path{
+          fill: black
+        }
       }
     }
 
@@ -1250,7 +1292,7 @@ ul,p{
       transition: .2s;
 
       path{
-        //fill: black;
+        fill: white;
       }
     }
 
@@ -1278,6 +1320,13 @@ ul,p{
     margin-bottom: 40px;
   }
 
+  &__slider{
+
+    @include for-550 {
+      padding: 0 15px;
+    }
+  }
+
   &__items{
 
   }
@@ -1294,6 +1343,10 @@ ul,p{
     border-radius: 15px 0px 0px 0px;
     position: relative;
     overflow: hidden;
+
+    @include for-550{
+      flex-direction: column;
+    }
   }
 
   &__left{
@@ -1301,6 +1354,21 @@ ul,p{
     position: relative;
     flex: 0 0 200px;
     padding: 30px 30px 30px 70px;
+
+
+    @include for-550{
+      max-width: calc(100% - 15px);
+      padding: 30px 15px 15px 25px;
+      display: flex;
+      flex-wrap: wrap;
+      flex: auto;
+      align-items: center;
+    }
+
+    > *{
+      position: relative;
+      z-index: 2;
+    }
 
     &:before{
       content: '';
@@ -1312,6 +1380,11 @@ ul,p{
       background: #6177FF;
       box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.1);
       border-radius: 15px 0px 0px 0px;
+
+      @include for-550{
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
@@ -1322,8 +1395,16 @@ ul,p{
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    position: relative;
-    z-index: 2;
+
+
+    @include for-550{
+      margin-bottom: 0;
+      width: 60px;
+      height: 60px;
+      flex: 0 0 60px;
+      float: left;
+      margin-right: 25px;
+    }
 
     img{
       width: 100%;
@@ -1341,6 +1422,10 @@ ul,p{
     color: #FFFFFF;
     margin-bottom: 10px;
     white-space: nowrap;
+
+    @include for-550{
+      white-space: initial;
+    }
   }
 
   &__data{
@@ -1350,6 +1435,11 @@ ul,p{
     letter-spacing: 0.01em;
     color: #FFFFFF;
     white-space: nowrap;
+
+    @include for-550{
+      white-space: initial;
+      display: none;
+    }
   }
 
   &__right{
@@ -1358,6 +1448,11 @@ ul,p{
     height: 100%;
     flex-direction: column;
     min-height: 245px;
+
+    @include for-550{
+      padding: 10px 25px 80px;
+      min-height: auto;
+    }
   }
 
   &__txt{
@@ -1367,6 +1462,13 @@ ul,p{
     color: #FFFFFF;
     text-indent: 25px;
     width: 100%;
+
+    @include for-550{
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
   }
 
   &__btn{
@@ -1379,6 +1481,10 @@ ul,p{
     position: relative;
     padding-right: 10px;
     margin-top: auto;
+
+    @include for-550{
+      display: none;
+    }
 
     &:after{
       content: url("../img/ico/arrow-w-right.svg");
@@ -1417,6 +1523,14 @@ ul,p{
     left: auto;
     position: absolute;
     right: 0;
+
+    @include for-550{
+      bottom: 30px;
+      right: auto;
+      left: calc(50% + 40px);
+      transform: translateX(-50%);
+      z-index: 1
+    }
   }
 
   .swiper-button-prev{
@@ -1594,6 +1708,10 @@ ul,p{
     @include for-1200{
       justify-content: space-between;
     }
+
+    @include for-992{
+      flex-direction: column;
+    }
   }
 
   &__item{
@@ -1611,6 +1729,15 @@ ul,p{
       width: 50%;
     }
 
+    @include for-992{
+      width: 100%;
+      margin-bottom: 80px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+
     &:after{
       content: '';
       position: absolute;
@@ -1626,6 +1753,16 @@ ul,p{
         transform: translateX(100%);
         left: auto;
         right: 45px;
+      }
+
+      @include for-992{
+        width: 52px;
+        background-size: auto;
+        left: 50%;
+        right: auto;
+        bottom: -40px;
+        top: auto;
+        transform: translateX(-50%) translateY(0) rotate(90deg);
       }
 
     }
@@ -1664,6 +1801,13 @@ ul,p{
     text-align: center;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+
+    @include for-992{
+      max-width: 226px;
+      br{
+        display: none;
+      }
+    }
   }
 
 }
