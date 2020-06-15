@@ -64,87 +64,88 @@ block content
     .servise
       .servise__inner.site-container
         h2.servise__title.site-h2 УСЛУГИ НАРКОЛОГИЧЕСКОГО ЦЕНТРА
-        .servise__items
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img01.webp" type="image/webp")
-                source(srcset="./img/services-img01.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Вывод из запоя на дому и в клинике
-              .servise__txt Снятие абстинентного синдрома при алкоголизме.
-              .servise__price от 3 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img02.webp" type="image/webp")
-                source(srcset="./img/services-img02.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name УБОД
-              .servise__txt Ультрабыстрая опиоидная детоксикация. Только в условиях клиники.
-              .servise__price от 13 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img03.webp" type="image/webp")
-                source(srcset="./img/services-img03.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Кодирование / Подшивание
-              .servise__txt Создание отрицательного рефлекса на алкоголь.
-              .servise__price от 4 500 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img04.webp" type="image/webp")
-                source(srcset="./img/services-img04.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Вызов нарколога на дом
-              .servise__txt Круглосуточная наркологическая помощь на дому.
-              .servise__price от 3 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img05.webp" type="image/webp")
-                source(srcset="./img/services-img05.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Снятие ломки
-              .servise__txt Снятие абстинентного синдрома при наркомании.        Только в условиях клиники.
-              .servise__price от 3 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img06.webp" type="image/webp")
-                source(srcset="./img/services-img06.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Детоксикация
-              .servise__txt Очищение организма от токсичных веществ при алкоголизме или наркомании. Чистка крови.
-              .servise__price от 3 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img07.webp" type="image/webp")
-                source(srcset="./img/services-img07.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Реабилитация в стационаре
-              .servise__txt Психо-социальная реабилитации в закрытом стационаре по программе              «12 шагов».
-              .servise__price от 15 000 руб.
-          .servise__item
-            .servise__img
-              picture
-                source(srcset="./img/services-img08.webp" type="image/webp")
-                source(srcset="./img/services-img08.png" type="image/png")
-                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
-            .servise__desc
-              .servise__name Мотивация  зависимых на лечение
-              .servise__txt Если зависимый не хочет лечится или не признает проблему. Поможем убедить.
-              .servise__price от 5 000 руб.
+        .servise__slider.swiper-container#servise-slider
+          .servise__items.swiper-wrapper
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img01.webp" type="image/webp")
+                  source(srcset="./img/services-img01.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Вывод из запоя на дому и в клинике
+                .servise__txt Снятие абстинентного синдрома при алкоголизме.
+                .servise__price от 3 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img02.webp" type="image/webp")
+                  source(srcset="./img/services-img02.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name УБОД
+                .servise__txt Ультрабыстрая опиоидная детоксикация. Только в условиях клиники.
+                .servise__price от 13 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img03.webp" type="image/webp")
+                  source(srcset="./img/services-img03.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Кодирование / Подшивание
+                .servise__txt Создание отрицательного рефлекса на алкоголь.
+                .servise__price от 4 500 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img04.webp" type="image/webp")
+                  source(srcset="./img/services-img04.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Вызов нарколога на дом
+                .servise__txt Круглосуточная наркологическая помощь на дому.
+                .servise__price от 3 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img05.webp" type="image/webp")
+                  source(srcset="./img/services-img05.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Снятие ломки
+                .servise__txt Снятие абстинентного синдрома при наркомании.        Только в условиях клиники.
+                .servise__price от 3 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img06.webp" type="image/webp")
+                  source(srcset="./img/services-img06.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Детоксикация
+                .servise__txt Очищение организма от токсичных веществ при алкоголизме или наркомании. Чистка крови.
+                .servise__price от 3 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img07.webp" type="image/webp")
+                  source(srcset="./img/services-img07.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Реабилитация в стационаре
+                .servise__txt Психо-социальная реабилитации в закрытом стационаре по программе              «12 шагов».
+                .servise__price от 15 000 руб.
+            .servise__item.swiper-slide
+              .servise__img
+                picture
+                  source(srcset="./img/services-img08.webp" type="image/webp")
+                  source(srcset="./img/services-img08.png" type="image/png")
+                  img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+              .servise__desc
+                .servise__name Мотивация  зависимых на лечение
+                .servise__txt Если зависимый не хочет лечится или не признает проблему. Поможем убедить.
+                .servise__price от 5 000 руб.
 
 
     .call-spec

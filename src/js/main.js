@@ -197,7 +197,26 @@ $(document).ready(function(){
       }
     });
 
-    
+    var mySwiper = new Swiper ('#servise-slider', {
+      slidesPerView: 1.2,
+      spaceBetween: 15,
+      loop: true,
+      breakpoints: {
+
+        1050:{
+          slidesPerView: 4.2,
+        },
+
+        800: {
+          slidesPerView: 3.2,
+        },
+
+        550: {
+          slidesPerView: 2.2,
+        },
+      }
+    });
+
   }
 
 
