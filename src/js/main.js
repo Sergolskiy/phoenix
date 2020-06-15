@@ -181,6 +181,26 @@ $(document).ready(function(){
   });
 
 
+  if($(window).width() < 1120) {
+    var mySwiper = new Swiper ('#course-slider', {
+      slidesPerView: 1.15,
+      spaceBetween: 15,
+      loop: true,
+      breakpoints: {
+        800: {
+          slidesPerView: 2.15,
+        },
+
+        550: {
+          slidesPerView: 1.75,
+        },
+      }
+    });
+
+    
+  }
+
+
   var phoneMask = $('input[data-valid="phone"]');
   $(phoneMask).inputmask('+7(999)999-99-99');
 
