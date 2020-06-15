@@ -164,6 +164,25 @@ $(document).ready(function(){
   var phoneMask = $('input[data-valid="phone"]');
   $(phoneMask).inputmask('+7(999)999-99-99');
 
+
+  /*popups start*/
+  $(document).on('click', 'a[data-modal-class]', function (e) {
+    var dataModalId = $(this).attr('data-modal-class');
+    $('.popup.' + dataModalId + '').addClass('open');
+  });
+
+  $(document).on('click', '.popup__close', function (e) {
+    $('.popup ').removeClass('open');
+  });
+
+  $(document).on('click', '.popup', function (e) {
+    console.log(e.target.classList[0]);
+    if(e.target.classList[0] == "popup") {
+      $('.popup ').removeClass('open');
+    }
+  });
+  /*popups end*/
+
 });
 
 
