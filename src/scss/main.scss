@@ -897,6 +897,10 @@ ul,p{
 
   &__img{
     max-width: 100%;
+
+    img{
+      width: 100%;
+    }
   }
 
   &__desc{
@@ -1049,6 +1053,11 @@ ul,p{
 
   &__inner{
 
+
+    @include for-1100{
+      //padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__title{
@@ -1056,23 +1065,40 @@ ul,p{
   }
 
   &__list{
-    display: flex;
-    margin: 0 -15px;
+
+
+    @include from-1100{
+      display: flex;
+      margin:  0 -15px;
+      box-sizing: border-box;
+    }
   }
 
   &__item{
-    padding: 0 15px;
+
+    @include from-1100{
+      padding: 0 15px;
+      //width: 33.33333%;
+      flex-shrink: initial;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__content{
-    width: 370px;
+    //width: 370px;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 50px 100px;
+    padding: 40px 40px 100px;
     position: relative;
     height: 100%;
+    width: 100%;
+
+    @include for-550{
+      padding: 30px 25px 50px;
+    }
   }
 
   &__name{
@@ -1084,6 +1110,12 @@ ul,p{
     color: #FFFFFF;
     max-width: 280px;
     margin-bottom: 35px;
+
+    @include for-550{
+      font-size: 30px;
+      line-height: 34px;
+      margin-bottom: 25px;
+    }
   }
 
   &__link{
@@ -1095,6 +1127,12 @@ ul,p{
     color: #FFFFFF;
     text-decoration: underline;
     margin-bottom: 25px;
+
+    @include for-550{
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 14px;
+    }
   }
 
   &__txt{
@@ -1114,12 +1152,21 @@ ul,p{
         letter-spacing: 0.01em;
         color: #FFFFFF;
         margin: 10px 0;
+
+        @include for-550{
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
     }
   }
 
   &__sublist-min{
     margin-top: 35px;
+
+    @include for-550{
+      margin-top: 15px;
+    }
   }
 
   &__price{
@@ -1138,12 +1185,30 @@ ul,p{
     max-width: 320px;
     width: 100%;
 
+    @include for-550{
+      font-size: 20px;
+      line-height: 27px;
+      max-width: 220px;
+      padding: 20px 5px;
+      bottom: -25px;
+    }
+
     span{
-      font-size: 36px;
+      font-size: 28px;
       font-weight: 700;
     }
   }
 
+}
+
+#course-slider{
+  overflow: initial;
+
+  @include from-1100{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 
@@ -1734,10 +1799,20 @@ ul,p{
     right: 60px;
     width: 40px;
     height: 40px;
+    transition: .2s;
+    border-radius: 50%;
 
     &:hover{
+      background-color: #FFFFFF;
+      box-shadow: 0px 7px 15px rgba(124, 135, 237, 0.25);
+
       svg{
+        fill:  #4a63fe;
         transform: scale(0.9);
+
+        path{
+          fill:  #4a63fe;
+        }
       }
     }
 
@@ -1745,6 +1820,7 @@ ul,p{
       transition: .2s;
 
       path{
+        transition: .2s;
         fill: #DBDBDB;
       }
     }
@@ -1758,16 +1834,20 @@ ul,p{
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: #FFFFFF;
     border-radius: 50%;
     transition: .2s;
-    box-shadow: 0px 7px 15px -5px rgba(124, 135, 237, 0.25);
+    //box-shadow: 0px 7px 15px -5px rgba(124, 135, 237, 0.25);
 
     &:hover{
+      background-color: #FFFFFF;
       box-shadow: 0px 7px 15px rgba(124, 135, 237, 0.25);
 
       svg{
         transform: scale(0.9);
+
+        path{
+          fill:  #4a63fe;
+        }
       }
     }
 
@@ -1775,7 +1855,8 @@ ul,p{
       transition: .2s;
 
       path{
-        fill: #4a63fe;
+        transition: .2s;
+        fill: #DBDBDB;
       }
     }
 
