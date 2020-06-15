@@ -125,10 +125,10 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev',
     },
     loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
     breakpoints: {
       992: {
         slidesPerView: 4
@@ -140,6 +140,24 @@ $(document).ready(function(){
         slidesPerView: 2
       },
     }
+  });
+
+  $('#sertificate-slider').magnificPopup({
+    delegate: 'a:not(.slick-cloned)',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    gallery: {
+      enabled: true,
+    },
+    zoom: {
+      enabled: true,
+      duration: 300
+    },
+    removalDelay: 300,
+    disableOn: 0,
+    midClick: true,
+
   });
 
 
