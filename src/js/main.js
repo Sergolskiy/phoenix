@@ -107,20 +107,33 @@ $(document).ready(function(){
 
 
   var mySwiper = new Swiper ('#reviews-slider', {
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView: 1.05,
+    spaceBetween: 15,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
     breakpoints: {
-      768: {
-        slidesPerView: 2.45
+      1200: {
+        slidesPerView: 2.45,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      },
+
+      992: {
+        slidesPerView: 1.45,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      },
+
+      550: {
+        slidesPerView: 1,
+        spaceBetween: 30,
       },
     }
   });
@@ -140,7 +153,7 @@ $(document).ready(function(){
       992: {
         slidesPerView: 4
       },
-      768: {
+      800: {
         slidesPerView: 3
       },
       550: {
