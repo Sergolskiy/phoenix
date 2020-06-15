@@ -215,9 +215,39 @@ ul,p{
 }
 
 .site-tabs{
+  display: flex;
+  justify-content: center;
 
   &__item{
+    font-size: 16px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    padding: 0 35px;
+    position: relative;
+    transition: .2s;
 
+    &:hover{
+      color: #4A63FE;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1px;
+      height: 20px;
+      width: 2px;
+      background: #4A63FE;
+    }
+
+    &:last-child{
+
+      &:after{
+        display: none;
+      }
+    }
   }
 }
 
@@ -755,6 +785,109 @@ ul,p{
 
 
 
+.course{
+  padding-bottom: 130px;
+
+  &__inner{
+
+  }
+
+  &__title{
+
+  }
+
+  &__list{
+    display: flex;
+    margin: 0 -15px;
+  }
+
+  &__item{
+    padding: 0 15px;
+  }
+
+  &__content{
+    width: 370px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 50px 100px;
+    position: relative;
+    height: 100%;
+  }
+
+  &__name{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 280px;
+    margin-bottom: 35px;
+  }
+
+  &__link{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin-bottom: 25px;
+  }
+
+  &__txt{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &__sublist, &__sublist-min{
+    width: 100%;
+
+    ul{
+
+      li{
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__sublist-min{
+    margin-top: 35px;
+  }
+
+  &__price{
+    background: #4A63FE;
+    box-shadow: 0px 10px 15px rgba(74, 99, 254, 0.25);
+    border-radius: 50px;
+    position: absolute;
+    bottom: -40px;
+
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 27px 39px;
+    max-width: 320px;
+    width: 100%;
+
+    span{
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+
+}
+
+
 .advantage{
 
   &__inner{
@@ -803,7 +936,6 @@ ul,p{
   }
 
 }
-
 
 
 .warrranty{
