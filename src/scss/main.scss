@@ -141,7 +141,7 @@ ul,p{
   justify-content: center;
   max-width: 220px;
   width: 100%;
-  transition: .3s;
+  transition: .3s all;
   border: 2px solid transparent;
 
   &--br{
@@ -153,6 +153,7 @@ ul,p{
     font-weight: 700;
     line-height: 28px;
     color: white;
+    transition: .3s all;
   }
 
   &:hover{
@@ -325,6 +326,10 @@ ul,p{
     padding: 0 35px;
     position: relative;
     transition: .2s;
+
+    &.active{
+      color: #4A63FE;
+    }
 
     @include for-550{
       font-size: 14px;
@@ -972,6 +977,10 @@ ul,p{
   }
 
   &__item{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
 
     @include from-1100{
       max-width: 25%;
@@ -998,6 +1007,9 @@ ul,p{
     margin-top: -80px;
     position: relative;
     z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     @include for-768{
       padding-bottom: 10px;
@@ -1009,6 +1021,13 @@ ul,p{
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.01em;
+    display: flex;
+    color: black;
+    transition: .3s;
+
+    &:hover{
+      color: #4A63FE;
+    }
   }
 
   &__txt{
@@ -1031,6 +1050,7 @@ ul,p{
     line-height: 17px;
     letter-spacing: 0.01em;
     color: #545454;
+    margin-top: auto;
 
     @include for-768
   }
@@ -1528,10 +1548,10 @@ ul,p{
   &__inner{
     background: #4A63FE;
     border-radius: 50px 0px;
-    padding: 45px 70px 50px;
+    padding: 40px 70px 50px;
 
     @include for-768{
-      padding: 45px 30px 0;
+      padding: 40px 30px 0;
     }
   }
 
@@ -1543,6 +1563,7 @@ ul,p{
     text-transform: uppercase;
     color: #FFFFFF;
     text-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+    padding-top: 5px;
 
     @include for-768{
       font-size: 20px;
@@ -1564,7 +1585,6 @@ ul,p{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
 
     picture{
       transition: .3s;
@@ -1572,11 +1592,15 @@ ul,p{
       justify-content: center;
       align-items: center;
       width: 100%;
+      padding: 25px;
     }
 
     &:hover{
       picture {
-        box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+
+        img {
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.25);
+        }
       }
     }
 
@@ -1612,7 +1636,7 @@ ul,p{
   }
 
   .swiper-button-wrap{
-    top: -19px;
+    top: -14px;
     right: 30px;
     left: auto;
     position: absolute;
@@ -1857,6 +1881,7 @@ ul,p{
     color: #FFFFFF;
     text-indent: 25px;
     width: 100%;
+    text-align: justify;
 
     @include for-550{
       font-size: 10px;
@@ -1955,7 +1980,7 @@ ul,p{
 
       path{
         transition: .2s;
-        fill: #DBDBDB;
+        fill: black;
       }
     }
 
@@ -1990,7 +2015,7 @@ ul,p{
 
       path{
         transition: .2s;
-        fill: #DBDBDB;
+        fill: black;
       }
     }
 
@@ -2111,7 +2136,7 @@ ul,p{
     color: #FFFFFF;
     margin-bottom: 15px;
     display: flex;
-    transition: .2s;
+    transition: .3s all;
 
     @include for-1200{
       font-size: 30px;
@@ -2824,6 +2849,23 @@ ul,p{
     display: block;
     margin-left: auto;
     width: fit-content;
+    position: relative;
+    transition: .2s all;
+    padding-right: 20px;
+
+    &:hover{
+      transform: translateX(5px);
+    }
+
+    &:after{
+      content: '';
+      height: 100%;
+      width: 14px;
+      background: url("../img/ico/arrow-thin.svg") center no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 0;
+    }
   }
 
 }
@@ -3193,6 +3235,8 @@ ul,p{
 
   .site-text-block__txt p{
     margin-bottom: 60px;
+    text-align: justify;
+
 
     @include for-550{
       margin-bottom: 35px;
@@ -3201,6 +3245,19 @@ ul,p{
     &:last-child{
       margin-bottom: 0;
     }
+
+    a{
+      color: #757575;
+      text-decoration: underline;
+      transition: .2s;
+      font-weight: 700;
+
+      &:hover{
+        text-decoration: none;
+        color: #4A63FE;
+      }
+    }
+
   }
 
   @include for-768{
@@ -3252,4 +3309,12 @@ ul,p{
 
 .error-field input{
   border-color: red !important;
+}
+
+.tabs-block-i{
+  display: none;
+
+  &.active{
+    display: inherit;
+  }
 }

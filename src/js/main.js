@@ -244,6 +244,7 @@ $(document).ready(function(){
 
   /*popups start*/
   $(document).on('click', 'a[data-modal-class]', function (e) {
+    e.preventDefault();
     var dataModalId = $(this).attr('data-modal-class');
     $('.popup.' + dataModalId + '').addClass('open');
   });
@@ -259,6 +260,15 @@ $(document).ready(function(){
     }
   });
   /*popups end*/
+
+  $('.site-tabs__item').click(function (e) {
+    $('.site-tabs__item').removeClass('active');
+    $(this).addClass('active');
+    var dataTabId = $(this).attr('data-tab-id');
+
+    $('.tabs-block-i').removeClass('active');
+    $('#'+ dataTabId +'').addClass('active');
+  });
 
 });
 
