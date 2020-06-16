@@ -209,7 +209,7 @@ ul,p{
     input{
       width: 100%;
       background: white;
-      border: 0.3px solid black;
+      border: 0.5px solid black;
       box-sizing: border-box;
       border-radius: 0px 11px;
       font-size: 12px;
@@ -217,6 +217,10 @@ ul,p{
       padding: 0 22px;
       line-height: 30px;
       width: 100%;
+
+      @include for-550{
+        font-size: 16px;
+      }
     }
   }
 
@@ -410,10 +414,11 @@ ul,p{
     opacity: 0.9;
     height: 60px;
     transition: 0.3s;
+    z-index: 20;
 
     &.menu-open{
       background: #FFFFFF;
-      opacity: 0.95;
+      opacity: 1;
       position: fixed;
     }
   }
@@ -596,7 +601,7 @@ ul,p{
   &__submenu-link{
     white-space: nowrap;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 250%;
     color: #000000;
     transition: 0.3s;
@@ -604,6 +609,10 @@ ul,p{
 
     &:hover{
       color: #f00;
+    }
+
+    @include for-550{
+      font-size: 10px;
     }
   }
 
@@ -3241,7 +3250,7 @@ ul,p{
   }
 
   .site-text-block__txt p{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-align: justify;
 
 

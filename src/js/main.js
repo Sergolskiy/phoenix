@@ -69,7 +69,7 @@ $(document).ready(function(){
     });
   } else {
     $('.header__menu-item').click(function (e) {
-      if($(e.target).hasClass('header__menu-link')){
+      if($(this).find('.header__submenu').length > 0){
         e.preventDefault();
         $(this).addClass('open');
       }
@@ -247,18 +247,21 @@ $(document).ready(function(){
   /*popups start*/
   $(document).on('click', 'a[data-modal-class]', function (e) {
     e.preventDefault();
+    $('body').toggleClass('fixed');
     var dataModalId = $(this).attr('data-modal-class');
     $('.popup.' + dataModalId + '').addClass('open');
   });
 
   $(document).on('click', '.popup__close', function (e) {
     $('.popup ').removeClass('open');
+    $('body').toggleClass('fixed');
   });
 
   $(document).on('click', '.popup', function (e) {
 
     if(e.target.classList[0] == "popup") {
       $('.popup ').removeClass('open');
+      $('body').toggleClass('fixed');
     }
   });
   /*popups end*/
