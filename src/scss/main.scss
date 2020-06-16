@@ -8,6 +8,12 @@
   font-weight: 400;
 }
 
+body.fixed{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
 textarea,
 input,
 a,
@@ -393,12 +399,12 @@ ul,p{
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.49);
-  opacity: 0.9;
   z-index: 2;
 
   @include for-992{
     align-items: flex-start;
     top: 0;
+    position: fixed;
 
     background: rgba(255, 255, 255, 0.49);
     opacity: 0.9;
@@ -456,7 +462,7 @@ ul,p{
       right: 0;
       top: 60px;
       background: #FFFFFF;
-      opacity: 0.95;
+      //opacity: 0.95;
       width: 100%;
       height: calc(100vh - 60px);
       padding-top: 45px;
@@ -507,7 +513,7 @@ ul,p{
   }
 
   &__menu-link{
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: #414141;
     text-transform: uppercase;
@@ -532,7 +538,7 @@ ul,p{
       left: 50%;
       transform: translateX(-50%);
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       opacity: 0;
       font-weight: 700;
       //background: white;
@@ -593,10 +599,11 @@ ul,p{
     font-size: 10px;
     line-height: 250%;
     color: #000000;
+    transition: 0.3s;
+    display: block;
 
     &:hover{
-      font-weight: 700;
-      color: #000000;
+      color: #f00;
     }
   }
 
@@ -3258,6 +3265,16 @@ ul,p{
       }
     }
 
+  }
+
+  .about {
+     .site-text-block__txt .site-text-block__w100-img ~ p{
+      margin-bottom: 40px;
+
+       @include for-550{
+         margin-bottom: 35px;
+       }
+    }
   }
 
   @include for-768{

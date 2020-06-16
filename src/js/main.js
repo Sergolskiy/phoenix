@@ -82,7 +82,9 @@ $(document).ready(function(){
 
 
 
-  $('.header__menu-btn').click(function () {
+  $('.header__menu-btn').click(function (e) {
+    e.preventDefault();
+    $('body').toggleClass('fixed');
     $(this).closest('header').toggleClass('menu-open');
     $('.header__menu').toggleClass('open');
     $(this).toggleClass('open');
